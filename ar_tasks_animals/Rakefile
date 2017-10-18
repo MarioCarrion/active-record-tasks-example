@@ -1,0 +1,11 @@
+# frozen_string_literal: true
+
+Dir[File.join(File.dirname(__FILE__), 'tasks', '*.rake').to_s].each do |file|
+  load file
+end
+
+task default: %w[help]
+
+task :help do
+  puts 'Use rake -T to get a list of all tasks available'
+end

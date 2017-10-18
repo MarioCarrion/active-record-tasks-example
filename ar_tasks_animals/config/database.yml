@@ -1,0 +1,18 @@
+default: &default
+  adapter: mysql2
+  host: 127.0.0.1
+  username: root
+  password:
+  timeout: 5000
+
+development:
+  <<: *default
+  database: ar_tasks_animals_development
+
+test:
+  <<: *default
+  database: ar_tasks_animals_test
+
+production:
+  <<: *default
+  database: ar_tasks_animals_production
